@@ -422,3 +422,10 @@ body {
 .price{
     color: #2DA5F3;
 }
+.support{
+    background-color:#303639 ;
+}
+.copywrite{
+    text-align: center;
+    color: #ADB7BC;
+}
