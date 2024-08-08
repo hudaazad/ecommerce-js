@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
     <title>E-commerce</title>
 </head>
 <body>
@@ -24,7 +28,7 @@
             </div>
         </div>
     </div>
-    <div class="container-2">
+    <div class="container-1">
         <div class="top">
             <div class="welcome">
                 Welcome to Clicon online eCommerce store.
@@ -50,7 +54,6 @@
                     <img src="instagram.png" alt="Instagram">
                 </a>
             </div>
-            
             <div class="language-currency">
                 <div class="languages">
                     <select>
@@ -66,6 +69,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="container-2">
         <div class="bottom">
             <div class="icon">
                 <img src="Icon.png" alt="web-icon">
@@ -127,18 +132,17 @@
     </nav>
     
     <div class="container-4">
-        <div class="left-content">
-            <div class="best-deals">
-                Best Deals
+        <div class="content-wrapper">
+            <div class="left-content">
+                <div class="best-deals">Best Deals</div>
+                <div class="deal-timer">Deal ends in <span>16d : 21h : 57m : 23s</span></div>
             </div>
-            <div class="deal-timer">
-                Deal ends in <span>16d : 21h : 57m : 23s</span>
+            <div class="browse-products">
+                <a href="#">Browse all products <img src="blueArrowRight.png" alt="arrow"></a>
             </div>
-        </div>
-        <div class="browse-products">
-            <a href="#">Browse all products <img src="blueArrowRight.png" alt="arrow"></a>
         </div>
     </div>
+    
     <div class="container-5">
         <div class="xbox">
             <div class="discount-offer">32% OFF</div>
@@ -178,71 +182,308 @@
             </div>
         </div>
         <div class="grid-container">
-            <div class="grid">
-                <div class="sold-out">SOLD OUT</div>
-                <img src="drone.png" alt="bose-earbuds">
-                <div class="product-name">Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear...</div> 
-                <div class="product-amount">$2,300</div>
+            <div class="grid"  data-product-id="1">
+                <div class="before-hover">
+                    <div class="sold-out">SOLD OUT</div>
+                    <img src="drone.png" alt="bose-earbuds">
+                    <div class="product-name">Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear...</div> 
+                    <div class="product-amount">$2,300</div>
+                </div>
+                <div class="middle">
+                    <div class="wishlist-hover"><img src="Heart-hover.png" alt="wishlist"></div>
+                    <div class="cart-hover"><img src="cart-hover.png" alt="shopping-cart"></div>
+                    <div class="view-hover"><img src="Eye.png" alt="eye"></div>
+                </div>
              </div>
-            <div class="grid">
-                <img src="simple mobile.png" alt="simple mobile">
-                <div class="product-name">Simple Mobile 4G LTE Prepaid Smartphone</div> 
-                <div class="product-amount">$220</div>
+            <div class="grid"  data-product-id="2">
+                <div class="before-hover">
+                    <img src="simple mobile.png" alt="simple mobile">
+                    <div class="product-name">Simple Mobile 4G LTE Prepaid Smartphone</div> 
+                    <div class="product-amount">$220</div>
+                </div>
+                <div class="middle">
+                    <div class="wishlist-hover"><img src="Heart-hover.png" alt="wishlist"></div>
+                    <div class="cart-hover"><img src="cart-hover.png" alt="shopping-cart"></div>
+                    <div class="view-hover"><img src="Eye.png" alt="eye"></div>
+                </div>
             </div>
-            <div class="grid">
-                <div class="discount-offer">19% OFF</div>
-                <img src="joystick.png" alt="joystick">
-                <div class="product-name">4K UHD LED Smart TV with Chromecast Built-in</div> 
+            <div class="grid"  data-product-id="3">
+                <div class="before-hover">
+                    <div class="discount-offer">19% OFF</div>
+                    <img src="joystick.png" alt="joystick">
+                    <div class="product-name">4K UHD LED Smart TV with Chromecast Built-in</div> 
+                    <div class="product-amount">
+                        <span>$865</span>
+                        $1,50
+                    </div>
+                </div>
+                <div class="middle">
+                    <div class="wishlist-hover"><img src="Heart-hover.png" alt="wishlist"></div>
+                    <div class="cart-hover"><img src="cart-hover.png" alt="shopping-cart"></div>
+                    <div class="view-hover"><img src="Eye.png" alt="eye"></div>
+                </div>
+            </div>
+            <div class="grid"  data-product-id="4">
+                <div class="before-hover">
+                    <img src="headphone.png" alt="headphones">
+                    <div class="product-name">Sony DSCHX8 High Zoom Point & Shoot Camera</div> 
+                    <div class="product-amount">$1,200</div>
+                </div>
+                <div class="middle">
+                    <div class="wishlist-hover"><img src="Heart-hover.png" alt="wishlist"></div>
+                    <div class="cart-hover"><img src="cart-hover.png" alt="shopping-cart"></div>
+                    <div class="view-hover"><img src="Eye.png" alt="eye"></div>
+                </div>
+            </div>
+            <div class="grid"  data-product-id="5">
+                <div class="before-hover">
+                    <img src="smartphoneblue.png" alt="smartphone">
+                    <div class="product-name">Dell Optiplex 7000x7480 All-in-One Computer Monitor</div> 
+                    <div class="product-amount">$299</div>
+                </div>
+                <div class="middle">
+                    <div class="wishlist-hover"><img src="Heart-hover.png" alt="wishlist"></div>
+                    <div class="cart-hover"><img src="cart-hover.png" alt="shopping-cart"></div>
+                    <div class="view-hover"><img src="Eye.png" alt="eye"></div>
+                </div>
+            </div>
+            <div class="grid"  data-product-id="6">
+                <div class="before-hover">
+                    <img src="remote-drone.png" alt="drone">
+                    <div class="product-name">Portable Wshing Machine, 11lbs capacity Model 18NMFIAM</div> 
+                    <div class="product-amount">
+                        <span>$865.99</span>
+                        $70
+                    </div>
+                </div>
+                <div class="middle">
+                    <div class="wishlist-hover"><img src="Heart-hover.png" alt="wishlist"></div>
+                    <div class="cart-hover"><img src="cart-hover.png" alt="shopping-cart"></div>
+                    <div class="view-hover"><img src="Eye.png" alt="eye"></div>
+                </div>
+            </div>
+            <div class="grid"  data-product-id="7">
+                <div class="before-hover">
+                    <div class="hot">HOT</div>
+                    <img src="desktop.png" alt="desktop">
+                    <div class="product-name">2-Barrel Carburetor Carb 2100 Engine Increase Horsepower</div> 
+                    <div class="product-amount">$160</div>
+                </div>
+                <div class="middle">
+                    <div class="wishlist-hover"><img src="Heart-hover.png" alt="wishlist"></div>
+                    <div class="cart-hover"><img src="cart-hover.png" alt="shopping-cart"></div>
+                    <div class="view-hover"><img src="Eye.png" alt="eye"></div>
+                </div>
+            </div>
+            <div class="grid"  data-product-id="8">
+                <div class="before-hover">
+                    <div class="discount-offer">32% OFF</div>
+                    <img src="webcam.png" alt="webcam">
+                    <div class="product-name">JBL FLIP 4 - Waterproof Portable Bluetooth Speaker - Black</div> 
+                    <div class="product-amount">
+                        <span>$360</span>
+                        $250
+                    </div>
+                </div>
+                <div class="middle">
+                    <div class="wishlist-hover"><img src="Heart-hover.png" alt="wishlist"></div>
+                    <div class="cart-hover"><img src="cart-hover.png" alt="shopping-cart"></div>
+                    <div class="view-hover"><img src="Eye.png" alt="eye"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal1">
+        <div class="modal-content">
+            <img src="drone.png" alt="Bose Sport Earbuds" class="product-img">
+            <div class="details">
+                <div class="star-rating">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <h5><span>4.7 Star Rating </span>(21,671 User feedback)</h5>
+                </div>
+                <h2>Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear...</h2>
+                <p>Sku: A264671</p>
+                <p>Brand: Apple</p>
                 <div class="product-amount">
                     <span>$865</span>
                     $1,50
                 </div>
             </div>
-            <div class="grid">
-                <img src="headphone.png" alt="headphones">
-                <div class="product-name">Sony DSCHX8 High Zoom Point & Shoot Camera</div> 
-                <div class="product-amount">$1,200</div>
-            </div>
-            <div class="grid">
-                <img src="smartphoneblue.png" alt="smartphone">
-                <div class="product-name">Dell Optiplex 7000x7480 All-in-One Computer Monitor</div> 
-                <div class="product-amount">$299</div>
-            </div>
-            <div class="grid">
-                <img src="remote-drone.png" alt="drone">
-                <div class="product-name">Portable Wshing Machine, 11lbs capacity Model 18NMFIAM</div> 
-                <div class="product-amount">
-                    <span>$865.99</span>
-                    $70
-                </div>
-            </div>
-            <div class="grid">
-                <div class="hot">HOT</div>
-                <img src="desktop.png" alt="desktop">
-                <div class="product-name">2-Barrel Carburetor Carb 2100 Engine Increase Horsepower</div> 
-                <div class="product-amount">$160</div>
-            </div>
-            <div class="grid">
-                <div class="discount-offer">32% OFF</div>
-                <img src="webcam.png" alt="webcam">
-                <div class="product-name">JBL FLIP 4 - Waterproof Portable Bluetooth Speaker - Black</div> 
-                <div class="product-amount">
-                    <span>$360</span>
-                    $250
-                </div>
-            </div>
+            <button class="close-modal" data-modal-id="modal1">&times;</button>
         </div>
     </div>
-    <div class="shop-products">
-        <table>
-
-        </table>
+    <div class="modal" id="modal2">
+        <div class="modal-content">
+            <img src="simple mobile.png" alt="Simple Mobile 4G LTE Prepaid Smartphone" class="product-img">
+            <div class="details">
+                <div class="star-rating">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <h5><span>4.7 Star Rating </span>(21,671 User feedback)</h5>
+                </div>
+                <h2>Simple Mobile 4G LTE Prepaid Smartphone</h2>
+                <p>Sku: A264671</p>
+                <p>Brand: Apple</p>
+                <div class="product-amount">
+                    <span>$865</span>
+                    $1,50
+                </div>
+            </div>
+            <button class="close-modal" data-modal-id="modal2">&times;</button>
+        </div>
     </div>
+    <div class="modal" id="modal3">
+        <div class="modal-content">
+            <img src="joystick.png" alt="4K UHD LED Smart TV" class="product-img">
+            <div class="details">
+                <div class="star-rating">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <h5><span>4.7 Star Rating </span>(21,671 User feedback)</h5>
+                </div>
+                <h2>4K UHD LED Smart TV with Chromecast Built-in</h2>
+                <p>Sku: A264671</p>
+                <p>Brand: Apple</p>
+                <div class="product-amount">
+                    <span>$865</span>
+                    $1,50
+                </div>
+            </div>
+            <button class="close-modal" data-modal-id="modal3">&times;</button>
+        </div>
+    </div>
+    <div class="modal" id="modal4">
+        <div class="modal-content">
+            <img src="headphone.png" alt="Sony DSCHX8 Camera" class="product-img">
+            <div class="details">
+                <div class="star-rating">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <h5><span>4.7 Star Rating </span>(21,671 User feedback)</h5>
+                </div>
+                <h2>Sony DSCHX8 High Zoom Point & Shoot Camera</h2>
+                <p>Sku: A264671</p>
+                <p>Brand: Apple</p>
+                <div class="product-amount">
+                    <span>$865</span>
+                    $1,50
+                </div>
+            </div>
+            <button class="close-modal" data-modal-id="modal4">&times;</button>
+        </div>
+    </div>
+    <div class="modal" id="modal5">
+        <div class="modal-content">
+            <img src="smartphoneblue.png" alt="Dell Optiplex Monitor" class="product-img">
+            <div class="details">
+                <div class="star-rating">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <h5><span>4.7 Star Rating </span>(21,671 User feedback)</h5>
+                </div>
+                <h2>Dell Optiplex 7000x7480 All-in-One Computer Monitor</h2>
+                <p>Sku: A264671</p>
+                <p>Brand: Apple</p>
+                <div class="product-amount">
+                    <span>$865</span>
+                    $1,50
+                </div>
+            </div>
+            <button class="close-modal" data-modal-id="modal5">&times;</button>
+        </div>
+    </div>
+    <div class="modal" id="modal6">
+        <div class="modal-content">
+            <img src="remote-drone.png" alt="Portable Washing Machine" class="product-img">
+            <div class="details">
+                <div class="star-rating">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <h5><span>4.7 Star Rating </span>(21,671 User feedback)</h5>
+                </div>
+                <h2>Portable Washing Machine, 11lbs Capacity Model 18NMFIAM</h2>
+                <p>Sku: A264671</p>
+                <p>Brand: Apple</p>
+                <div class="product-amount">
+                    <span>$865</span>
+                    $1,50
+                </div>
+            </div>
+            <button class="close-modal" data-modal-id="modal6">&times;</button>
+        </div>
+    </div>
+    <div class="modal" id="modal7">
+        <div class="modal-content">
+            <img src="desktop.png" alt="2-Barrel Carburetor" class="product-img">
+            <div class="details">
+                <div class="star-rating">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <h5><span>4.7 Star Rating </span>(21,671 User feedback)</h5>
+                </div>
+                <h2>2-Barrel Carburetor Carb 2100 Engine Increase Horsepower</h2>
+                <p>Sku: A264671</p>
+                <p>Brand: Apple</p>
+                <div class="product-amount">
+                    <span>$865</span>
+                    $1,50
+                </div>
+            </div>
+            <button class="close-modal" data-modal-id="modal7">&times;</button>
+        </div>
+    </div>
+    <div class="modal" id="modal8">
+        <div class="modal-content">
+            <img src="webcam.png" alt="JBL FLIP 4 Speaker" class="product-img">
+            <div class="details">
+                <div class="star-rating">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <img src="Star.png" alt="star">
+                    <h5><span>4.7 Star Rating </span>(21,671 User feedback)</h5>
+                </div>
+                <h2>JBL FLIP 4 - Waterproof Portable Bluetooth Speaker - Black</h2>
+                <p>Sku: A264671</p>
+                <p>Brand: Apple</p>
+                <div class="product-amount">
+                    <span>$865</span>
+                    $1,50
+                </div>
+            </div>
+            <button class="close-modal" data-modal-id="modal8">&times;</button>
+        </div>
+    </div>
+
     <div class="categorys">
         Shop with Categorys
     </div>
-        <div class="slideshow-products">
-            <div class="orange-circle"><img src="left.png" alt="left arrow"></div>
+    <div class="slideshow-products">
+        <div class="slide-btn" id="prevbtn"><a href="#" class="previous round">&#8249;</a></div>
+        <div class="carousel">
             <div class="slide">
                 <img src="laptop.png" alt="laptop">
                 <span>Computer & Laptop</span>
@@ -267,26 +508,33 @@
                 <img src="tv.png" alt="television">
                 <span>TV & Homes</span>
             </div>
-            <div class="orange-circle"><img src="right.png" alt="right arrow"></div>
         </div>
+        <div class="slide-btn" id="nextbtn"><a href="#" class="next round">&#8250;</a></div>
+    </div>    
         <div class="grid-2">
             <div class="flash-sale">
                 <div class="grid-title">FLASH SALE TODAY</div>
                 <div class="grid-container2">
                     <div class="grid-item">
                         <img src="webcamm.png" alt="webcam">
-                        <div class="about">Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear...</div>
-                        <div class="price">$1,500</div>
+                        <div class="info">
+                            <div class="about">Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear...</div>
+                            <div class="price">$1,500</div>
+                        </div>
                     </div>
                     <div class="grid-item">
                         <img src="navyphone.png" alt="mobile">
-                        <div class="about">Simple Mobile 4G LTE Prepaid Smartphone</div>
-                        <div class="price">$1,500</div>
+                        <div class="info">
+                            <div class="about">Simple Mobile 4G LTE Prepaid Smartphone</div>
+                            <div class="price">$1,500</div>
+                        </div>
                     </div>
                     <div class="grid-item">
                         <img src="keyboard2.png" alt="keyboard">
-                        <div class="about">4K UHD LED Smart TV with Chromecast Built-in</div>
-                        <div class="price">$1,500</div>
+                        <div class="info">
+                            <div class="about">4K UHD LED Smart TV with Chromecast Built-in</div>
+                            <div class="price">$1,500</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -295,18 +543,24 @@
                 <div class="grid-container2">
                     <div class="grid-item">
                         <img src="xbox2.png" alt="xbox">
-                        <div class="about">Samsung Electronics Samsung Galexy S21 5G</div>
-                        <div class="price">$1,500</div>
+                        <div class="info">
+                            <div class="about">Samsung Electronics Samsung Galaxy S21 5G</div>
+                            <div class="price">$1,500</div>
+                        </div>
                     </div>
                     <div class="grid-item">
                         <img src="cctv.png" alt="cctv">
-                        <div class="about">Simple Mobile 5G LTE Galexy 12 Mini 512GB Gaming Phone</div>
-                        <div class="price">$1,500</div>
+                        <div class="info">
+                            <div class="about">Simple Mobile 5G LTE Galaxy 12 Mini 512GB Gaming Phone</div>
+                            <div class="price">$1,500</div>
+                        </div>
                     </div>
                     <div class="grid-item">
                         <img src="lightbluephone.png" alt="mobile">
-                        <div class="about">Sony DSCHX8 High Zoom Point & Shoot Camera</div>
-                        <div class="price">$1,500</div>
+                        <div class="info">
+                            <div class="about">Sony DSCHX8 High Zoom Point & Shoot Camera</div>
+                            <div class="price">$1,500</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -315,18 +569,24 @@
                 <div class="grid-container2">
                     <div class="grid-item">
                         <img src="tv2.png" alt="tv">
-                        <div class="about">Portable Wshing Machine, 11lbs capacity Model 18NMF...</div>
-                        <div class="price">$1,500</div>
+                        <div class="info">
+                            <div class="about">Portable Washing Machine, 11lbs capacity Model 18NMF...</div>
+                            <div class="price">$1,500</div>
+                        </div>
                     </div>
                     <div class="grid-item">
                         <img src="droone2.png" alt="drone">
-                        <div class="about">Sony DSCHX8 High Zoom Point & Shoot Camera</div>
-                        <div class="price">$1,500</div>
+                        <div class="info">
+                            <div class="about">Sony DSCHX8 High Zoom Point & Shoot Camera</div>
+                            <div class="price">$1,500</div>
+                        </div>
                     </div>
                     <div class="grid-item">
                         <img src="speaker.png" alt="speaker">
-                        <div class="about">Dell Optiplex 7000x7480 All-in-One Computer Monitor</div>
-                        <div class="price">$1,500</div>
+                        <div class="info">
+                            <div class="about">Dell Optiplex 7000x7480 All-in-One Computer Monitor</div>
+                            <div class="price">$1,500</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -335,26 +595,104 @@
                 <div class="grid-container2">
                     <div class="grid-item">
                         <img src="phone2.png" alt="mobile">
-                        <div class="about">TOZO T6 True Wireless Earbuds Bluetooth Headpho...</div>
-                        <div class="price">$1,500</div>
+                        <div class="info">
+                            <div class="about">TOZO T6 True Wireless Earbuds Bluetooth Headpho...</div>
+                            <div class="price">$1,500</div>
+                        </div>
                     </div>
                     <div class="grid-item">
                         <img src="printer.png" alt="printer">
-                        <div class="about">JBL FLIP 4 - Waterproof Portable Bluetooth Speaker...</div>
-                        <div class="price">$1,500</div>
+                        <div class="info">
+                            <div class="about">JBL FLIP 4 - Waterproof Portable Bluetooth Speaker...</div>
+                            <div class="price">$1,500</div>
+                        </div>
                     </div>
                     <div class="grid-item">
                         <img src="joystick2.png" alt="joystick">
-                        <div class="about">Wyze Cam Pan v2 1080p Pan/Tilt/Zoom Wi-Fi Indoor Smar...</div>
-                        <div class="price">$1,500</div>
+                        <div class="info">
+                            <div class="about">Wyze Cam Pan v2 1080p Pan/Tilt/Zoom Wi-Fi Indoor Smar...</div>
+                            <div class="price">$1,500</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="support">
-            <div class="copywrite">
-                Kinbo - eCommerce Template &copy 2021. Design by Templatecookie
+        
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <img src="logo.png" alt="Logo">
+                        <span>CLICON</span>
+                    </div>
+                    <div class="contact-info">
+                        <p><span>Customer Supports:</span></p>
+                        <p>(629) 555-0129</p>
+                        <p><span>4517 Washington Ave. Manchester, Kentucky 39495</span></p>
+                        <p>info@kinbo.com</p>
+                    </div>
+                </div>
+                <div class="footer-category">
+                    <h3>TOP CATEGORY</h3>
+                    <ul>
+                        <li><a href="#">Computer & Laptop</a></li>
+                        <li><a href="#">SmartPhone</a></li>
+                        <li><a href="#">Headphone</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Camera & Photo</a></li>
+                        <li><a href="#">TV & Homes</a></li>
+                        <li><a href="#"><span>Browse All Product</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>QUICK LINKS</h3>
+                    <ul>
+                        <li><a href="#">Shop Product</a></li>
+                        <li><a href="#">Shoping Cart</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Compare</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Customer Help</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-download">
+                    <h3>DOWNLOAD APP</h3>
+                    <a href="https://play.google.com" class="app-link">
+                        <img src="playstore.png" alt="Google Play">
+                        <div class="googleplay">
+                            Get it now <span>Google Play</span>
+                        </div>
+                    </a>
+                    <a href="https://www.apple.com/in/app-store/" class="app-link">
+                        <img src="Apple---Negative 1.png" alt="Apple Store">
+                        <div class="appstore">
+                            Get it now <span>App Store</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="footer-tag">
+                    <h3>POPULAR TAG</h3>
+                    <div class="tags">
+                        <a href="#"><span>Game</span></a>
+                        <a href="#"><span>iPhone</span></a>
+                        <a href="#"><span>TV</span></a>
+                        <a href="#"><span>Asus Laptops</span></a>
+                        <a href="#"><span>Macbook</span></a>
+                        <a href="#"><span>SSD</span></a>
+                        <a href="#"><span>Graphics Card</span></a>
+                        <a href="#"><span>Power Bank</span></a>
+                        <a href="#"><span>Smart TV</span></a>
+                        <a href="#"><span>Speaker</span></a>
+                        <a href="#"><span>Tablet</span></a>
+                        <a href="#"><span>Microwave</span></a>
+                        <a href="#"><span>Samsung</span></a>
+                    </div>
+                </div>                
             </div>
-        </div>
+            <div class="copywrite">
+                Kinbo - eCommerce Template &copy; 2021. Design by Templatecookie
+            </div> 
+        </footer>
 </body>
 </html>
