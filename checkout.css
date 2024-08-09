@@ -1,0 +1,367 @@
+body {
+    font-family:'public sans';
+}
+.container-1{
+    background-color: #1B6392;
+}
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white; 
+    font-weight: bold;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 30px; 
+    margin-right: 10px; 
+}
+
+.user-icons {
+    display: flex;
+    align-items: center; 
+}
+
+.user-icons img {
+    width: 30px;
+    margin-left: 15px; 
+}
+
+.container-2 {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 10px;
+}
+.container-2 a{
+    color: #5F6C72;
+    text-decoration: none;
+}
+.container-2 select {
+    background-color: #F2F4F5; 
+    border: none;
+    padding: 15px;
+    border-radius: 2px;
+}
+.container-2 div{
+    margin: 10px;
+}
+.container-2 img{
+    width: 20px;
+    margin-right: 8px;
+}
+.user-settings img{
+    margin-right: 5px;
+}
+.container-2 > div {
+    display: flex;
+    align-items: center;
+}
+.return-home a , .go-home a{
+    text-decoration: none;
+}
+.go-home a{
+    color: #555;
+}
+.go-home a span{
+    color: #2DA5F3;
+}
+.container-3 {
+    display: flex;
+    margin: 20px 0;
+}
+.close-button button{
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid grey;
+    background-color: white;
+}
+.checkout-items {
+    flex: 3;
+    margin-right: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.container-4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.table-name {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.item-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.item-image {
+    display: flex;
+    align-items: center;
+}
+
+.item-image img {
+    margin-right: 15px;
+}
+
+.item-price .old-price {
+    text-decoration: line-through;
+    color: rgba(34, 35, 36, 0.52);
+    margin-right: 10px;
+}
+
+.item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.number-of-items {
+    font-size: 16px;
+    padding: 5px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.subtract-button, 
+.plus-button {
+    background-color: white;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.nav-buttons button {
+    border: 1px solid #2DA5F3;
+    background-color: white;
+    color: #2DA5F3;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+}
+
+.cart-total {
+    flex: 1;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.cart-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cart-content {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.cart-content div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.cart-content div span {
+    font-weight: bold;
+    color: #000;
+}
+
+.cart-sum {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.checkout-button button {
+    background-color: #FA8232;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 15px 20px;
+    width: 100%;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.container-4{
+    padding: 20px;
+}
+.table-name{
+    background-color: #F2F4F5;
+    padding: 20px;
+}
+.footer {
+    background-color: #191C1F;
+    color: #ccc;
+    padding: 40px 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.footer-logo, .footer-category, .footer-links, .footer-download, .footer-tag {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-links a, .footer-category a{
+    text-decoration:none ;
+    color: #929FA5;
+}
+.contact-info span{
+    color: #929FA5;
+}
+.logo {
+    max-width: 250px;
+}
+
+.logo img {
+    vertical-align: middle;
+    width: 40px; 
+}
+
+.logo span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff6600;
+    margin-left: 10px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.footer-category ul, .footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-category li, .footer-links li {
+    margin: 5px 0;
+}
+
+.footer-category a span{
+    color: yellow;
+}
+
+.app-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 10px;
+}
+.googleplay, .appstore{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+.googleplay span, .appstore span{
+    font-size: 20px;
+}
+.footer-download img {
+    width: 20px; 
+    margin-right: 10px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tags a {
+    text-decoration: none;
+    margin: 8px;
+}
+
+.tags span {
+    background-color: #191C1F;
+    padding: 5px 10px;
+    border-radius: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.173);
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tags a:hover span {
+    background-color: rgba(255, 255, 255, 0.632);
+    color: #191C1F;
+}
+
+
+h3 {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 10px;
+}
+.copywrite{
+    text-align: center;
+    color: #ADB7BC;
+    font-size: 14px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.125);
+}
+.app-link{
+    background-color: #303639;
+    width: max-content;
+    padding: 10px;
+}

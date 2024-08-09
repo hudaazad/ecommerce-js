@@ -84,8 +84,11 @@
             </div>
             <div class="user-settings">
                 <div class="shopping-cart">
-                    <img src="ShoppingCartSimple.png" alt="shopping-cart">
-                </div>
+                    <div class="products-in-cart">0</div>
+                    <a href="checkout.html">
+                        <img src="cart.png" alt="shopping-cart">
+                    </a>
+                </div>                
                 <div class="total-wishlist">
                     <img src="Heart.png" alt="wishlist">
                 </div>
@@ -144,7 +147,7 @@
     </div>
     
     <div class="container-5">
-        <div class="xbox">
+        <div class="xbox" data-product-id="21">
             <div class="discount-offer">32% OFF</div>
             <div class="hot">HOT</div>
             <img src="xbox.png" alt="xbox">
@@ -179,6 +182,46 @@
                 <div class="view">
                     <img src="Eye.png" alt="">
                 </div>
+            </div>
+        </div>
+        <div class="modal product-modal" id="modal21">
+            <div class="modal-content">
+                <img src="xbox.png" class="product-img">
+                <div class="details">
+                    <div class="star-rating">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <h5><span>4.7 Star Rating </span>(21,671 User feedback)</h5>
+                    </div>
+                    <h2>Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear...</h2>
+                    <p>Sku: A264671</p>
+                    <p>Brand: Apple</p>
+                    <div class="product-amount">
+                        <span>$865.99</span>
+                        $442.12
+                    </div>
+                    <div class="cart-functions">
+                        <div class="count">
+                            <div class="subtract-button">
+                                <button onclick="decrement()">-</button>
+                            </div>
+                            <h2 class="counting">0</h2>
+                            <div class="plus-button">
+                                <button onclick="increment()">+</button>
+                            </div>
+                        </div>
+                        <div class="add-cart">
+                            <button class="add-to-cart">ADD TO CART <img src="cart.png"></button>
+                        </div>                        
+                        <div class="buy">
+                            <button>BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="close-modal" data-modal-id="modal21">&times;</button>
             </div>
         </div>
         <div class="grid-container">
@@ -293,7 +336,7 @@
             </div>
         </div>
     </div>
-    <div class="modal" id="modal1">
+    <div class="modal product-modal" id="modal1">
         <div class="modal-content">
             <img src="drone.png" alt="Bose Sport Earbuds" class="product-img">
             <div class="details">
@@ -312,11 +355,28 @@
                     <span>$865</span>
                     $1,50
                 </div>
+                <div class="cart-functions">
+                    <div class="count">
+                        <div class="subtract-button">
+                            <button onclick="decrement()">-</button>
+                        </div>
+                        <h2 class="counting">0</h2>
+                        <div class="plus-button">
+                            <button onclick="increment()">+</button>
+                        </div>
+                    </div>
+                    <div class="add-cart">
+                        <button onclick="addToCart()">ADD TO CART <img src="cart.png"> </button>
+                    </div>                    
+                    <div class="buy">
+                        <button>BUY NOW</button>
+                    </div>
+                </div>
             </div>
             <button class="close-modal" data-modal-id="modal1">&times;</button>
         </div>
     </div>
-    <div class="modal" id="modal2">
+    <div class="modal product-modal" id="modal2">
         <div class="modal-content">
             <img src="simple mobile.png" alt="Simple Mobile 4G LTE Prepaid Smartphone" class="product-img">
             <div class="details">
@@ -335,11 +395,28 @@
                     <span>$865</span>
                     $1,50
                 </div>
+                <div class="cart-functions">
+                    <div class="count">
+                        <div class="subtract-button">
+                            <button onclick="decrement()">-</button>
+                        </div>
+                        <h2 class="counting">0</h2>
+                        <div class="plus-button">
+                            <button onclick="increment()">+</button>
+                        </div>
+                    </div>
+                    <div class="add-cart">
+                        <button onclick="addToCart()">ADD TO CART <img src="cart.png"> </button>
+                    </div>    
+                    <div class="buy">
+                        <button>BUY NOW</button>
+                    </div>
+                </div>
             </div>
             <button class="close-modal" data-modal-id="modal2">&times;</button>
         </div>
     </div>
-    <div class="modal" id="modal3">
+    <div class="modal product-modal" id="modal3">
         <div class="modal-content">
             <img src="joystick.png" alt="4K UHD LED Smart TV" class="product-img">
             <div class="details">
@@ -358,11 +435,28 @@
                     <span>$865</span>
                     $1,50
                 </div>
+                <div class="cart-functions">
+                    <div class="count">
+                        <div class="subtract-button">
+                            <button onclick="decrement()">-</button>
+                        </div>
+                        <h2 class="counting">0</h2>
+                        <div class="plus-button">
+                            <button onclick="increment()">+</button>
+                        </div>
+                    </div>
+                    <div class="add-cart">
+                        <button onclick="addToCart()">ADD TO CART <img src="cart.png"> </button>
+                    </div>    
+                    <div class="buy">
+                        <button>BUY NOW</button>
+                    </div>
+                </div>
             </div>
             <button class="close-modal" data-modal-id="modal3">&times;</button>
         </div>
     </div>
-    <div class="modal" id="modal4">
+    <div class="modal product-modal" id="modal4">
         <div class="modal-content">
             <img src="headphone.png" alt="Sony DSCHX8 Camera" class="product-img">
             <div class="details">
@@ -381,11 +475,28 @@
                     <span>$865</span>
                     $1,50
                 </div>
+                <div class="cart-functions">
+                    <div class="count">
+                        <div class="subtract-button">
+                            <button onclick="decrement()">-</button>
+                        </div>
+                        <h2 class="counting">0</h2>
+                        <div class="plus-button">
+                            <button onclick="increment()">+</button>
+                        </div>
+                    </div>
+                    <div class="add-cart">
+                        <button onclick="addToCart()">ADD TO CART <img src="cart.png"> </button>
+                    </div>    
+                    <div class="buy">
+                        <button>BUY NOW</button>
+                    </div>
+                </div>
             </div>
             <button class="close-modal" data-modal-id="modal4">&times;</button>
         </div>
     </div>
-    <div class="modal" id="modal5">
+    <div class="modal product-modal" id="modal5">
         <div class="modal-content">
             <img src="smartphoneblue.png" alt="Dell Optiplex Monitor" class="product-img">
             <div class="details">
@@ -404,11 +515,28 @@
                     <span>$865</span>
                     $1,50
                 </div>
+                <div class="cart-functions">
+                    <div class="count">
+                        <div class="subtract-button">
+                            <button onclick="decrement()">-</button>
+                        </div>
+                        <h2 class="counting">0</h2>
+                        <div class="plus-button">
+                            <button onclick="increment()">+</button>
+                        </div>
+                    </div>
+                    <div class="add-cart">
+                        <button onclick="addToCart()">ADD TO CART <img src="cart.png"> </button>
+                    </div>    
+                    <div class="buy">
+                        <button>BUY NOW</button>
+                    </div>
+                </div>
             </div>
             <button class="close-modal" data-modal-id="modal5">&times;</button>
         </div>
     </div>
-    <div class="modal" id="modal6">
+    <div class="modal product-modal" id="modal6">
         <div class="modal-content">
             <img src="remote-drone.png" alt="Portable Washing Machine" class="product-img">
             <div class="details">
@@ -427,11 +555,28 @@
                     <span>$865</span>
                     $1,50
                 </div>
+                <div class="cart-functions">
+                    <div class="count">
+                        <div class="subtract-button">
+                            <button onclick="decrement()">-</button>
+                        </div>
+                        <h2 class="counting">0</h2>
+                        <div class="plus-button">
+                            <button onclick="increment()">+</button>
+                        </div>
+                    </div>
+                    <div class="add-cart">
+                        <button onclick="addToCart()">ADD TO CART <img src="cart.png"> </button>
+                    </div>    
+                    <div class="buy">
+                        <button>BUY NOW</button>
+                    </div>
+                </div>
             </div>
             <button class="close-modal" data-modal-id="modal6">&times;</button>
         </div>
     </div>
-    <div class="modal" id="modal7">
+    <div class="modal product-modal" id="modal7">
         <div class="modal-content">
             <img src="desktop.png" alt="2-Barrel Carburetor" class="product-img">
             <div class="details">
@@ -450,11 +595,28 @@
                     <span>$865</span>
                     $1,50
                 </div>
+                <div class="cart-functions">
+                    <div class="count">
+                        <div class="subtract-button">
+                            <button onclick="decrement()">-</button>
+                        </div>
+                        <h2 class="counting">0</h2>
+                        <div class="plus-button">
+                            <button onclick="increment()">+</button>
+                        </div>
+                    </div>
+                    <div class="add-cart">
+                        <button onclick="addToCart()">ADD TO CART <img src="cart.png"> </button>
+                    </div>
+                    <div class="buy">
+                        <button>BUY NOW</button>
+                    </div>
+                </div>
             </div>
             <button class="close-modal" data-modal-id="modal7">&times;</button>
         </div>
     </div>
-    <div class="modal" id="modal8">
+    <div class="modal product-modal" id="modal8">
         <div class="modal-content">
             <img src="webcam.png" alt="JBL FLIP 4 Speaker" class="product-img">
             <div class="details">
@@ -472,6 +634,23 @@
                 <div class="product-amount">
                     <span>$865</span>
                     $1,50
+                </div>
+                <div class="cart-functions">
+                    <div class="count">
+                        <div class="subtract-button">
+                            <button onclick="decrement()">-</button>
+                        </div>
+                        <h2 class="counting">0</h2>
+                        <div class="plus-button">
+                            <button onclick="increment()">+</button>
+                        </div>
+                    </div>
+                    <div class="add-cart">
+                        <button id="add-to-cart-button" onclick="addToCart()">ADD TO CART <img src="cart.png"> </button>
+                    </div>
+                    <div class="buy">
+                        <button>BUY NOW</button>
+                    </div>
                 </div>
             </div>
             <button class="close-modal" data-modal-id="modal8">&times;</button>
@@ -515,21 +694,21 @@
             <div class="flash-sale">
                 <div class="grid-title">FLASH SALE TODAY</div>
                 <div class="grid-container2">
-                    <div class="grid-item">
+                    <div class="grid-item" data-product-id="9">
                         <img src="webcamm.png" alt="webcam">
                         <div class="info">
                             <div class="about">Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear...</div>
                             <div class="price">$1,500</div>
                         </div>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item" data-product-id="10">
                         <img src="navyphone.png" alt="mobile">
                         <div class="info">
                             <div class="about">Simple Mobile 4G LTE Prepaid Smartphone</div>
                             <div class="price">$1,500</div>
                         </div>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item" data-product-id="11">
                         <img src="keyboard2.png" alt="keyboard">
                         <div class="info">
                             <div class="about">4K UHD LED Smart TV with Chromecast Built-in</div>
@@ -541,21 +720,21 @@
             <div class="best-sellers">
                 <div class="grid-title">BEST SELLERS</div>
                 <div class="grid-container2">
-                    <div class="grid-item">
+                    <div class="grid-item" data-product-id="12">
                         <img src="xbox2.png" alt="xbox">
                         <div class="info">
                             <div class="about">Samsung Electronics Samsung Galaxy S21 5G</div>
                             <div class="price">$1,500</div>
                         </div>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item" data-product-id="13">
                         <img src="cctv.png" alt="cctv">
                         <div class="info">
                             <div class="about">Simple Mobile 5G LTE Galaxy 12 Mini 512GB Gaming Phone</div>
                             <div class="price">$1,500</div>
                         </div>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item" data-product-id="14">
                         <img src="lightbluephone.png" alt="mobile">
                         <div class="info">
                             <div class="about">Sony DSCHX8 High Zoom Point & Shoot Camera</div>
@@ -567,21 +746,21 @@
             <div class="top-rated">
                 <div class="grid-title">TOP RATED</div>
                 <div class="grid-container2">
-                    <div class="grid-item">
+                    <div class="grid-item" data-product-id="15">
                         <img src="tv2.png" alt="tv">
                         <div class="info">
                             <div class="about">Portable Washing Machine, 11lbs capacity Model 18NMF...</div>
                             <div class="price">$1,500</div>
                         </div>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item" data-product-id="16">
                         <img src="droone2.png" alt="drone">
                         <div class="info">
                             <div class="about">Sony DSCHX8 High Zoom Point & Shoot Camera</div>
                             <div class="price">$1,500</div>
                         </div>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item" data-product-id="17">
                         <img src="speaker.png" alt="speaker">
                         <div class="info">
                             <div class="about">Dell Optiplex 7000x7480 All-in-One Computer Monitor</div>
@@ -593,21 +772,21 @@
             <div class="new-arrival">
                 <div class="grid-title">NEW ARRIVAL</div>
                 <div class="grid-container2">
-                    <div class="grid-item">
+                    <div class="grid-item" data-product-id="18">
                         <img src="phone2.png" alt="mobile">
                         <div class="info">
                             <div class="about">TOZO T6 True Wireless Earbuds Bluetooth Headpho...</div>
                             <div class="price">$1,500</div>
                         </div>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item" data-product-id="19">
                         <img src="printer.png" alt="printer">
                         <div class="info">
                             <div class="about">JBL FLIP 4 - Waterproof Portable Bluetooth Speaker...</div>
                             <div class="price">$1,500</div>
                         </div>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item" data-product-id="20">
                         <img src="joystick2.png" alt="joystick">
                         <div class="info">
                             <div class="about">Wyze Cam Pan v2 1080p Pan/Tilt/Zoom Wi-Fi Indoor Smar...</div>
@@ -617,7 +796,474 @@
                 </div>
             </div>
         </div>
-        
+        <div class="modal product-modal" id="modal9">
+            <div class="modal-content">
+                <img src="webcamm.png" class="product-img">
+                <div class="details">
+                    <div class="star-rating">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <h5><span>4.7 Star Rating </span>(21,671 User feedback)</h5>
+                    </div>
+                    <h2>Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear...</h2>
+                    <p>Sku: A264671</p>
+                    <p>Brand: Apple</p>
+                    <div class="product-amount">
+                        $1,500
+                    </div>
+                    <div class="cart-functions">
+                        <div class="count">
+                            <div class="subtract-button">
+                                <button onclick="decrement()">-</button>
+                            </div>
+                            <h2 class="counting">0</h2>
+                            <div class="plus-button">
+                                <button onclick="increment()">+</button>
+                            </div>
+                        </div>
+                        <div class="add-cart">
+                            <button>ADD TO CART <img src="cart.png"> </button>
+                        </div>
+                        <div class="buy">
+                            <button>BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="close-modal" data-modal-id="modal9">&times;</button>
+            </div>     
+        </div>
+        <div class="modal product-modal" id="modal10">
+            <div class="modal-content">
+                <img src="navyphone.png" class="product-img">
+                <div class="details">
+                    <div class="star-rating">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <h5><span>4.7 Star Rating </span>(21,671 User feedback)</h5>
+                    </div>
+                    <h2>Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear...</h2>
+                    <p>Sku: A264671</p>
+                    <p>Brand: Apple</p>
+                    <div class="product-amount">
+                        $1,500
+                    </div>
+                    <div class="cart-functions">
+                        <div class="count">
+                            <div class="subtract-button">
+                                <button onclick="decrement()">-</button>
+                            </div>
+                            <h2 class="counting">0</h2>
+                            <div class="plus-button">
+                                <button onclick="increment()">+</button>
+                            </div>
+                        </div>
+                        <div class="add-cart">
+                            <button>ADD TO CART <img src="cart.png"> </button>
+                        </div>
+                        <div class="buy">
+                            <button>BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="close-modal" data-modal-id="modal10">&times;</button>
+            </div>     
+        </div>
+        <div class="modal product-modal" id="modal11">
+            <div class="modal-content">
+                <img src="keyboard2.png" class="product-img">
+                <div class="details">
+                    <div class="star-rating">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <h5><span>4.7 Star Rating </span>(21,671 User feedback)</h5>
+                    </div>
+                    <h2>Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear...</h2>
+                    <p>Sku: A264671</p>
+                    <p>Brand: Apple</p>
+                    <div class="product-amount">
+                        $1,500
+                    </div>
+                    <div class="cart-functions">
+                        <div class="count">
+                            <div class="subtract-button">
+                                <button onclick="decrement()">-</button>
+                            </div>
+                            <h2 class="counting">0</h2>
+                            <div class="plus-button">
+                                <button onclick="increment()">+</button>
+                            </div>
+                        </div>
+                        <div class="add-cart">
+                            <button>ADD TO CART <img src="cart.png"> </button>
+                        </div>
+                        <div class="buy">
+                            <button>BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="close-modal" data-modal-id="modal11">&times;</button>
+            </div>     
+        </div>
+        <div class="modal product-modal" id="modal12">
+            <div class="modal-content">
+                <img src="xbox.png" class="product-img">
+                <div class="details">
+                    <div class="star-rating">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <h5><span>4.7 Star Rating </span>(21,671 User feedback)</h5>
+                    </div>
+                    <h2>Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear...</h2>
+                    <p>Sku: A264671</p>
+                    <p>Brand: Apple</p>
+                    <div class="product-amount">
+                        $1,500
+                    </div>
+                    <div class="cart-functions">
+                        <div class="count">
+                            <div class="subtract-button">
+                                <button onclick="decrement()">-</button>
+                            </div>
+                            <h2 class="counting">0</h2>
+                            <div class="plus-button">
+                                <button onclick="increment()">+</button>
+                            </div>
+                        </div>
+                        <div class="add-cart">
+                            <button>ADD TO CART <img src="cart.png"> </button>
+                        </div>
+                        <div class="buy">
+                            <button>BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="close-modal" data-modal-id="modal12">&times;</button>
+            </div>     
+        </div>
+        <div class="modal product-modal" id="modal13">
+            <div class="modal-content">
+                <img src="cctv.png" class="product-img">
+                <div class="details">
+                    <div class="star-rating">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <h5><span>4.7 Star Rating </span>(21,671 User feedback)</h5>
+                    </div>
+                    <h2>Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear...</h2>
+                    <p>Sku: A264671</p>
+                    <p>Brand: Apple</p>
+                    <div class="product-amount">
+                        $1,500
+                    </div>
+                    <div class="cart-functions">
+                        <div class="count">
+                            <div class="subtract-button">
+                                <button onclick="decrement()">-</button>
+                            </div>
+                            <h2 class="counting">0</h2>
+                            <div class="plus-button">
+                                <button onclick="increment()">+</button>
+                            </div>
+                        </div>
+                        <div class="add-cart">
+                            <button>ADD TO CART <img src="cart.png"> </button>
+                        </div>
+                        <div class="buy">
+                            <button>BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="close-modal" data-modal-id="modal13">&times;</button>
+            </div>     
+        </div>
+        <div class="modal product-modal" id="modal14">
+            <div class="modal-content">
+                <img src="lightbluephone.png" class="product-img">
+                <div class="details">
+                    <div class="star-rating">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <h5><span>4.7 Star Rating </span>(21,671 User feedback)</h5>
+                    </div>
+                    <h2>Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear...</h2>
+                    <p>Sku: A264671</p>
+                    <p>Brand: Apple</p>
+                    <div class="product-amount">
+                        $1,500
+                    </div>
+                    <div class="cart-functions">
+                        <div class="count">
+                            <div class="subtract-button">
+                                <button onclick="decrement()">-</button>
+                            </div>
+                            <h2 class="counting">0</h2>
+                            <div class="plus-button">
+                                <button onclick="increment()">+</button>
+                            </div>
+                        </div>
+                        <div class="add-cart">
+                            <button>ADD TO CART <img src="cart.png"> </button>
+                        </div>
+                        <div class="buy">
+                            <button>BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="close-modal" data-modal-id="modal14">&times;</button>
+            </div>     
+        </div>
+        <div class="modal product-modal" id="modal15">
+            <div class="modal-content">
+                <img src="tv.png" class="product-img">
+                <div class="details">
+                    <div class="star-rating">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <h5><span>4.7 Star Rating </span>(21,671 User feedback)</h5>
+                    </div>
+                    <h2>Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear...</h2>
+                    <p>Sku: A264671</p>
+                    <p>Brand: Apple</p>
+                    <div class="product-amount">
+                        $1,500
+                    </div>
+                    <div class="cart-functions">
+                        <div class="count">
+                            <div class="subtract-button">
+                                <button onclick="decrement()">-</button>
+                            </div>
+                            <h2 class="counting">0</h2>
+                            <div class="plus-button">
+                                <button onclick="increment()">+</button>
+                            </div>
+                        </div>
+                        <div class="add-cart">
+                            <button>ADD TO CART <img src="cart.png"> </button>
+                        </div>
+                        <div class="buy">
+                            <button>BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="close-modal" data-modal-id="modal15">&times;</button>
+            </div>     
+        </div>
+        <div class="modal product-modal" id="modal16">
+            <div class="modal-content">
+                <img src="drone.png" class="product-img">
+                <div class="details">
+                    <div class="star-rating">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <h5><span>4.7 Star Rating </span>(21,671 User feedback)</h5>
+                    </div>
+                    <h2>Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear...</h2>
+                    <p>Sku: A264671</p>
+                    <p>Brand: Apple</p>
+                    <div class="product-amount">
+                        $1,500
+                    </div>
+                    <div class="cart-functions">
+                        <div class="count">
+                            <div class="subtract-button">
+                                <button onclick="decrement()">-</button>
+                            </div>
+                            <h2 class="counting">0</h2>
+                            <div class="plus-button">
+                                <button onclick="increment()">+</button>
+                            </div>
+                        </div>
+                        <div class="add-cart">
+                            <button>ADD TO CART <img src="cart.png"> </button>
+                        </div>
+                        <div class="buy">
+                            <button>BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="close-modal" data-modal-id="modal16">&times;</button>
+            </div>     
+        </div>
+        <div class="modal product-modal" id="modal17">
+            <div class="modal-content">
+                <img src="speaker.png" class="product-img">
+                <div class="details">
+                    <div class="star-rating">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <h5><span>4.7 Star Rating </span>(21,671 User feedback)</h5>
+                    </div>
+                    <h2>Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear...</h2>
+                    <p>Sku: A264671</p>
+                    <p>Brand: Apple</p>
+                    <div class="product-amount">
+                        $1,500
+                    </div>
+                    <div class="cart-functions">
+                        <div class="count">
+                            <div class="subtract-button">
+                                <button onclick="decrement()">-</button>
+                            </div>
+                            <h2 class="counting">0</h2>
+                            <div class="plus-button">
+                                <button onclick="increment()">+</button>
+                            </div>
+                        </div>
+                        <div class="add-cart">
+                            <button>ADD TO CART <img src="cart.png"> </button>
+                        </div>
+                        <div class="buy">
+                            <button>BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="close-modal" data-modal-id="modal17">&times;</button>
+            </div>     
+        </div>
+        <div class="modal product-modal" id="modal18">
+            <div class="modal-content">
+                <img src="simple mobile.png" class="product-img">
+                <div class="details">
+                    <div class="star-rating">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <h5><span>4.7 Star Rating </span>(21,671 User feedback)</h5>
+                    </div>
+                    <h2>Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear...</h2>
+                    <p>Sku: A264671</p>
+                    <p>Brand: Apple</p>
+                    <div class="product-amount">
+                        $1,500
+                    </div>
+                    <div class="cart-functions">
+                        <div class="count">
+                            <div class="subtract-button">
+                                <button onclick="decrement()">-</button>
+                            </div>
+                            <h2 class="counting">0</h2>
+                            <div class="plus-button">
+                                <button onclick="increment()">+</button>
+                            </div>
+                        </div>
+                        <div class="add-cart">
+                            <button>ADD TO CART <img src="cart.png"> </button>
+                        </div>
+                        <div class="buy">
+                            <button>BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="close-modal" data-modal-id="modal18">&times;</button>
+            </div>     
+        </div>
+        <div class="modal product-modal" id="modal19">
+            <div class="modal-content">
+                <img src="printer.png" class="product-img">
+                <div class="details">
+                    <div class="star-rating">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <h5><span>4.7 Star Rating </span>(21,671 User feedback)</h5>
+                    </div>
+                    <h2>Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear...</h2>
+                    <p>Sku: A264671</p>
+                    <p>Brand: Apple</p>
+                    <div class="product-amount">
+                        $1,500
+                    </div>
+                    <div class="cart-functions">
+                        <div class="count">
+                            <div class="subtract-button">
+                                <button onclick="decrement()">-</button>
+                            </div>
+                            <h2 class="counting">0</h2>
+                            <div class="plus-button">
+                                <button onclick="increment()">+</button>
+                            </div>
+                        </div>
+                        <div class="add-cart">
+                            <button>ADD TO CART <img src="cart.png"> </button>
+                        </div>
+                        <div class="buy">
+                            <button>BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="close-modal" data-modal-id="modal19">&times;</button>
+            </div>     
+        </div>
+        <div class="modal product-modal" id="modal20">
+            <div class="modal-content">
+                <img src="joystick.png" class="product-img">
+                <div class="details">
+                    <div class="star-rating">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <img src="Star.png" alt="star">
+                        <h5><span>4.7 Star Rating </span>(21,671 User feedback)</h5>
+                    </div>
+                    <h2>Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear...</h2>
+                    <p>Sku: A264671</p>
+                    <p>Brand: Apple</p>
+                    <div class="product-amount">
+                        $1,500
+                    </div>
+                    <div class="cart-functions">
+                        <div class="count">
+                            <div class="subtract-button">
+                                <button onclick="decrement()">-</button>
+                            </div>
+                            <h2 class="counting">0</h2>
+                            <div class="plus-button">
+                                <button onclick="increment()">+</button>
+                            </div>
+                        </div>
+                        <div class="add-cart">
+                            <button>ADD TO CART <img src="cart.png"> </button>
+                        </div>
+                        <div class="buy">
+                            <button>BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="close-modal" data-modal-id="modal20">&times;</button>
+            </div>     
+        </div>
         <footer class="footer">
             <div class="footer-container">
                 <div class="footer-logo">

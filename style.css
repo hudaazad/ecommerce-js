@@ -165,6 +165,25 @@ body {
     width: 30px;
     margin-left: 15px; 
 }
+.shopping-cart {
+    position: relative;
+    display: inline-block;
+}
+
+.products-in-cart {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    position: absolute;
+    top: -5px;  
+    right: -5px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 10px; 
+}
 
 .container-3 {
     display: flex;
@@ -328,6 +347,63 @@ body {
 }
 .close-modal:hover {
     background: #555;
+}
+.cart-functions{
+    display: flex;
+}
+.cart-functions button{
+    border: none;
+}
+.count {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    margin: 20px 10px 20px 0px;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.297);
+    width: 120px; 
+}
+
+.plus-button, .subtract-button {
+    display: flex;
+    align-items: center; 
+}
+
+.counting {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 18px; 
+}
+
+.subtract-button button, .plus-button button {
+    background-color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border: none; 
+    padding: 5px; 
+}
+
+.add-cart{
+    padding: 5px;
+    margin: 20px 0px 20px 0px;
+    background-color: #FA8232;
+}
+
+.add-cart button{
+    background-color: #FA8232;
+    color: white;
+    cursor: pointer;
+}
+.buy{
+    padding: 5px;
+    margin: 20px 0px 20px 10px;
+    background-color: white;
+    border: 1px solid #FA8232;
+}
+.buy button{
+    background-color: white;
+    color: black;
+    cursor: pointer;
 }
 .grid {
     position: relative;
