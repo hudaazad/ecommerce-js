@@ -38,112 +38,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     const modals = document.querySelectorAll('.modal');
-    const grids = document.querySelectorAll('.grid');
     const closeButtons = document.querySelectorAll('.close-modal');
+    const grids = document.querySelectorAll('.grid, .grid-item, .xbox'); // Combine all grid selectors
+
+    // Function to open a modal
+    const openModal = (productId) => {
+        const modal = document.getElementById(`modal${productId}`);
+        if (modal) {
+            modal.style.display = 'flex';
+        } else {
+            console.error(`Modal with ID modal${productId} not found`);
+        }
+    };
+
+    // Function to close a modal
+    const closeModal = (modal) => {
+        if (modal) {
+            modal.style.display = 'none';
+        }
+    };
+
+    // Set up click listeners for grid items
     grids.forEach(grid => {
         grid.addEventListener('click', () => {
             const productId = grid.getAttribute('data-product-id');
-            const modal = document.getElementById(`modal${productId}`);
-            if (modal) {
-                modal.style.display = 'flex';
-            } else {
-                console.error(`Modal with ID modal${productId} not found`);
-            }
+            openModal(productId);
         });
     });
+
+    // Set up click listeners for close buttons
     closeButtons.forEach(button => {
         button.addEventListener('click', () => {
             const modalId = button.getAttribute('data-modal-id');
             const modal = document.getElementById(modalId);
-            if (modal) {
-                modal.style.display = 'none';
-            } else {
-                console.error(`Modal with ID ${modalId} not found`);
-            }
+            closeModal(modal);
         });
     });
+
+    // Set up click listeners for modals to close when clicking outside the content
     modals.forEach(modal => {
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-    });
-});
-
-//modal method  for second grid
-
-document.addEventListener('DOMContentLoaded', () => {
-    const grids = document.querySelectorAll('.grid-item');
-    const closeButtons = document.querySelectorAll('.close-modal');
-    
-    grids.forEach(grid => {
-        grid.addEventListener('click', () => {
-            const productId = grid.getAttribute('data-product-id');
-            const modal = document.getElementById(`modal${productId}`);
-            if (modal) {
-                modal.style.display = 'flex';
-            } else {
-                console.error(`Modal with ID modal${productId} not found`);
-            }
-        });
-    });
-
-    closeButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const modalId = button.getAttribute('data-modal-id');
-            const modal = document.getElementById(modalId);
-            if (modal) {
-                modal.style.display = 'none';
-            } else {
-                console.error(`Modal with ID ${modalId} not found`);
-            }
-        });
-    });
-
-    document.querySelectorAll('.modal').forEach(modal => {
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-    });
-});
-
-//modal method for xbox
-
-document.addEventListener('DOMContentLoaded', () => {
-    const grids = document.querySelectorAll('.xbox');
-    const closeButtons = document.querySelectorAll('.close-modal');
-    
-    grids.forEach(grid => {
-        grid.addEventListener('click', () => {
-            const productId = grid.getAttribute('data-product-id');
-            const modal = document.getElementById(`modal${productId}`);
-            if (modal) {
-                modal.style.display = 'flex';
-            } else {
-                console.error(`Modal with ID modal${productId} not found`);
-            }
-        });
-    });
-
-    closeButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const modalId = button.getAttribute('data-modal-id');
-            const modal = document.getElementById(modalId);
-            if (modal) {
-                modal.style.display = 'none';
-            } else {
-                console.error(`Modal with ID ${modalId} not found`);
-            }
-        });
-    });
-
-    document.querySelectorAll('.modal').forEach(modal => {
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
+                closeModal(modal);
             }
         });
     });
@@ -189,36 +125,60 @@ document.addEventListener('DOMContentLoaded', function() {
     updateTotalCount();
 });
 //add to cart
-// Function to handle the addition of products to the cart
-const addToCart = () => {
-    const quantity = document.querySelector('.counting').textContent;
-    const productName = document.querySelector(".details h2").textContent;
-    const productPrice = document.querySelector(".product-amount span").textContent;
-    const productImage = document.querySelector(".product-img").src;
-  
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  
-    // Check if the product already exists in the cart
-    const existingProductIndex = cart.findIndex(item => item.name === productName);
-  
-    if (existingProductIndex > -1) {
-      // If the product exists, increment the quantity
-      cart[existingProductIndex].quantity = parseInt(cart[existingProductIndex].quantity) + parseInt(quantity);
-    } else {
-      // If the product does not exist, add it to the cart
-      cart.push({
-        name: productName,
-        price: productPrice,
-        image: productImage,
-        quantity: quantity,
-      });
+// Function to increment the count
+function increment(button) {
+    const modal = button.closest('.product-modal');
+    const countingElement = modal.querySelector('.counting');
+    let count = parseInt(countingElement.textContent);
+    countingElement.textContent = count + 1;
+}
+
+// Function to decrement the count
+function decrement(button) {
+    const modal = button.closest('.product-modal');
+    const countingElement = modal.querySelector('.counting');
+    let count = parseInt(countingElement.textContent);
+    if (count > 0) {
+        countingElement.textContent = count - 1;
     }
-  
-    // Save the updated cart to localStorage
-    localStorage.setItem("cart", JSON.stringify(cart));
-    alert(`${quantity} ${productName} added to cart`);
-  }
-  
-  // Attach the addToCart function to the "ADD TO CART" button
-  document.querySelector('.add-cart button').addEventListener('click', addToCart);
-  
+}
+
+// Function to add the product to the cart
+// Add to cart function in script.js
+// In script.js (adding items to cart)
+function addToCart(button) {
+    const modal = button.closest('.product-modal');
+    const productName = modal.dataset.productName;
+    const productPrice = parseFloat(modal.dataset.productPrice);
+    const productImage = modal.dataset.productImage;
+    const countingElement = modal.querySelector('.counting');
+    const count = parseInt(countingElement.textContent);
+    
+    if (count > 0) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const existingItem = cart.find(item => item.name === productName);
+
+        if (existingItem) {
+            existingItem.quantity += count;
+        } else {
+            cart.push({
+                name: productName,
+                price: productPrice,
+                quantity: count,
+                image: productImage
+            });
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+        console.log('Cart after adding item:', JSON.parse(localStorage.getItem('cart')));
+    } else {
+        alert('Please select a quantity greater than 0.');
+    }
+    // Inside addToCart function
+console.log('Adding to cart:', {
+    name: productName,
+    price: productPrice,
+    quantity: count,
+    image: productImage
+});
+}

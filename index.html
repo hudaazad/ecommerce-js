@@ -184,7 +184,7 @@
                 </div>
             </div>
         </div>
-        <div class="modal product-modal" id="modal21">
+        <div class="modal product-modal" id="modal21" data-product-name="playstation" data-product-price="442.12" data-product-image="xbox.png">
             <div class="modal-content">
                 <img src="xbox.png" class="product-img">
                 <div class="details">
@@ -214,8 +214,8 @@
                             </div>
                         </div>
                         <div class="add-cart">
-                            <button class="add-to-cart">ADD TO CART <img src="cart.png"></button>
-                        </div>                        
+                            <button class="add-to-cart-button" onclick="addToCart(this)">Add to Cart</button>
+                        </div>                           
                         <div class="buy">
                             <button>BUY NOW</button>
                         </div>
@@ -336,7 +336,7 @@
             </div>
         </div>
     </div>
-    <div class="modal product-modal" id="modal1">
+    <div class="modal product-modal" id="modal1" data-product-name="Bose Sport Earbuds" data-product-price="865" data-product-image="drone.png">
         <div class="modal-content">
             <img src="drone.png" alt="Bose Sport Earbuds" class="product-img">
             <div class="details">
@@ -366,7 +366,7 @@
                         </div>
                     </div>
                     <div class="add-cart">
-                        <button onclick="addToCart()">ADD TO CART <img src="cart.png"> </button>
+                        <button class="add-to-cart-button" onclick="addToCart(this)">Add to Cart</button>
                     </div>                    
                     <div class="buy">
                         <button>BUY NOW</button>
@@ -376,7 +376,7 @@
             <button class="close-modal" data-modal-id="modal1">&times;</button>
         </div>
     </div>
-    <div class="modal product-modal" id="modal2">
+    <div class="modal product-modal" id="modal2" data-product-name="Simple Mobile 4G LTE Prepaid Smartphones" data-product-price="865" data-product-image="simple mobile.png">
         <div class="modal-content">
             <img src="simple mobile.png" alt="Simple Mobile 4G LTE Prepaid Smartphone" class="product-img">
             <div class="details">
@@ -406,7 +406,7 @@
                         </div>
                     </div>
                     <div class="add-cart">
-                        <button onclick="addToCart()">ADD TO CART <img src="cart.png"> </button>
+                        <button class="add-to-cart-button" onclick="addToCart(this)">Add to Cart</button>
                     </div>    
                     <div class="buy">
                         <button>BUY NOW</button>
@@ -416,7 +416,7 @@
             <button class="close-modal" data-modal-id="modal2">&times;</button>
         </div>
     </div>
-    <div class="modal product-modal" id="modal3">
+    <div class="modal product-modal" id="modal3" data-product-name="4K UHD LED Smart TV" data-product-price="865" data-product-image="joystick.png">
         <div class="modal-content">
             <img src="joystick.png" alt="4K UHD LED Smart TV" class="product-img">
             <div class="details">
@@ -446,7 +446,7 @@
                         </div>
                     </div>
                     <div class="add-cart">
-                        <button onclick="addToCart()">ADD TO CART <img src="cart.png"> </button>
+                        <button class="add-to-cart-button" onclick="addToCart(this)">Add to Cart</button>
                     </div>    
                     <div class="buy">
                         <button>BUY NOW</button>
@@ -456,7 +456,7 @@
             <button class="close-modal" data-modal-id="modal3">&times;</button>
         </div>
     </div>
-    <div class="modal product-modal" id="modal4">
+    <div class="modal product-modal" id="modal4" data-product-name="Sony DSCHX8 Camera" data-product-price="865" data-product-image="headphone.png">
         <div class="modal-content">
             <img src="headphone.png" alt="Sony DSCHX8 Camera" class="product-img">
             <div class="details">
@@ -486,7 +486,7 @@
                         </div>
                     </div>
                     <div class="add-cart">
-                        <button onclick="addToCart()">ADD TO CART <img src="cart.png"> </button>
+                        <button class="add-to-cart-button" onclick="addToCart(this)">Add to Cart</button>
                     </div>    
                     <div class="buy">
                         <button>BUY NOW</button>
@@ -496,7 +496,7 @@
             <button class="close-modal" data-modal-id="modal4">&times;</button>
         </div>
     </div>
-    <div class="modal product-modal" id="modal5">
+    <div class="modal product-modal" id="modal5" data-product-name="Dell Optiplex Monitor" data-product-price="865" data-product-image="smartphoneblue.png">
         <div class="modal-content">
             <img src="smartphoneblue.png" alt="Dell Optiplex Monitor" class="product-img">
             <div class="details">
@@ -526,7 +526,7 @@
                         </div>
                     </div>
                     <div class="add-cart">
-                        <button onclick="addToCart()">ADD TO CART <img src="cart.png"> </button>
+                        <button class="add-to-cart-button" onclick="addToCart(this)">Add to Cart</button>
                     </div>    
                     <div class="buy">
                         <button>BUY NOW</button>
@@ -536,7 +536,7 @@
             <button class="close-modal" data-modal-id="modal5">&times;</button>
         </div>
     </div>
-    <div class="modal product-modal" id="modal6">
+    <div class="modal product-modal" id="modal6" data-product-name="Portable Washing Machine" data-product-price="865" data-product-image="remote-drone.png">
         <div class="modal-content">
             <img src="remote-drone.png" alt="Portable Washing Machine" class="product-img">
             <div class="details">
@@ -566,7 +566,7 @@
                         </div>
                     </div>
                     <div class="add-cart">
-                        <button onclick="addToCart()">ADD TO CART <img src="cart.png"> </button>
+                        <button class="add-to-cart-button" onclick="addToCart(this)">Add to Cart</button>
                     </div>    
                     <div class="buy">
                         <button>BUY NOW</button>
@@ -576,7 +576,7 @@
             <button class="close-modal" data-modal-id="modal6">&times;</button>
         </div>
     </div>
-    <div class="modal product-modal" id="modal7">
+    <div class="modal product-modal" id="modal7" data-product-name="2-Barrel Carburetor" data-product-price="865" data-product-image="desktop.png">
         <div class="modal-content">
             <img src="desktop.png" alt="2-Barrel Carburetor" class="product-img">
             <div class="details">
@@ -606,7 +606,7 @@
                         </div>
                     </div>
                     <div class="add-cart">
-                        <button onclick="addToCart()">ADD TO CART <img src="cart.png"> </button>
+                        <button class="add-to-cart-button" onclick="addToCart(this)">Add to Cart</button>
                     </div>
                     <div class="buy">
                         <button>BUY NOW</button>
@@ -616,7 +616,7 @@
             <button class="close-modal" data-modal-id="modal7">&times;</button>
         </div>
     </div>
-    <div class="modal product-modal" id="modal8">
+    <div class="modal product-modal" id="modal8" data-product-name="JBL FLIP 4 Speaker" data-product-price="865" data-product-image="webcam.png">
         <div class="modal-content">
             <img src="webcam.png" alt="JBL FLIP 4 Speaker" class="product-img">
             <div class="details">
@@ -646,7 +646,7 @@
                         </div>
                     </div>
                     <div class="add-cart">
-                        <button id="add-to-cart-button" onclick="addToCart()">ADD TO CART <img src="cart.png"> </button>
+                        <button class="add-to-cart-button" onclick="addToCart(this)">Add to Cart</button>
                     </div>
                     <div class="buy">
                         <button>BUY NOW</button>
@@ -796,7 +796,7 @@
                 </div>
             </div>
         </div>
-        <div class="modal product-modal" id="modal9">
+        <div class="modal product-modal" id="modal9" data-product-name="Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear" data-product-price="1500" data-product-image="webcamm.png">
             <div class="modal-content">
                 <img src="webcamm.png" class="product-img">
                 <div class="details">
@@ -825,7 +825,7 @@
                             </div>
                         </div>
                         <div class="add-cart">
-                            <button>ADD TO CART <img src="cart.png"> </button>
+                            <button class="add-to-cart-button" onclick="addToCart(this)">Add to Cart</button>
                         </div>
                         <div class="buy">
                             <button>BUY NOW</button>
@@ -835,7 +835,7 @@
                 <button class="close-modal" data-modal-id="modal9">&times;</button>
             </div>     
         </div>
-        <div class="modal product-modal" id="modal10">
+        <div class="modal product-modal" id="modal10" data-product-name="Simple mobile" data-product-price="1500" data-product-image="navyphone.png">
             <div class="modal-content">
                 <img src="navyphone.png" class="product-img">
                 <div class="details">
@@ -864,7 +864,7 @@
                             </div>
                         </div>
                         <div class="add-cart">
-                            <button>ADD TO CART <img src="cart.png"> </button>
+                            <button class="add-to-cart-button" onclick="addToCart(this)">Add to Cart</button>
                         </div>
                         <div class="buy">
                             <button>BUY NOW</button>
@@ -874,7 +874,7 @@
                 <button class="close-modal" data-modal-id="modal10">&times;</button>
             </div>     
         </div>
-        <div class="modal product-modal" id="modal11">
+        <div class="modal product-modal" id="modal11" data-product-name="Keyboard" data-product-price="1500" data-product-image="keyboard2.png">
             <div class="modal-content">
                 <img src="keyboard2.png" class="product-img">
                 <div class="details">
@@ -903,7 +903,7 @@
                             </div>
                         </div>
                         <div class="add-cart">
-                            <button>ADD TO CART <img src="cart.png"> </button>
+                            <button class="add-to-cart-button" onclick="addToCart(this)">Add to Cart</button>
                         </div>
                         <div class="buy">
                             <button>BUY NOW</button>
@@ -913,7 +913,7 @@
                 <button class="close-modal" data-modal-id="modal11">&times;</button>
             </div>     
         </div>
-        <div class="modal product-modal" id="modal12">
+        <div class="modal product-modal" id="modal12" data-product-name="playstation" data-product-price="1500" data-product-image="xbox.png">
             <div class="modal-content">
                 <img src="xbox.png" class="product-img">
                 <div class="details">
@@ -942,7 +942,7 @@
                             </div>
                         </div>
                         <div class="add-cart">
-                            <button>ADD TO CART <img src="cart.png"> </button>
+                            <button class="add-to-cart-button" onclick="addToCart(this)">Add to Cart</button>
                         </div>
                         <div class="buy">
                             <button>BUY NOW</button>
@@ -952,7 +952,7 @@
                 <button class="close-modal" data-modal-id="modal12">&times;</button>
             </div>     
         </div>
-        <div class="modal product-modal" id="modal13">
+        <div class="modal product-modal" id="modal13" data-product-name="cctv" data-product-price="1500" data-product-image="cctv.png">
             <div class="modal-content">
                 <img src="cctv.png" class="product-img">
                 <div class="details">
@@ -981,7 +981,7 @@
                             </div>
                         </div>
                         <div class="add-cart">
-                            <button>ADD TO CART <img src="cart.png"> </button>
+                            <button class="add-to-cart-button" onclick="addToCart(this)">Add to Cart</button>
                         </div>
                         <div class="buy">
                             <button>BUY NOW</button>
@@ -991,7 +991,7 @@
                 <button class="close-modal" data-modal-id="modal13">&times;</button>
             </div>     
         </div>
-        <div class="modal product-modal" id="modal14">
+        <div class="modal product-modal" id="modal14" data-product-name="smartphone" data-product-price="1500" data-product-image="lightbluephone.png">
             <div class="modal-content">
                 <img src="lightbluephone.png" class="product-img">
                 <div class="details">
@@ -1020,7 +1020,7 @@
                             </div>
                         </div>
                         <div class="add-cart">
-                            <button>ADD TO CART <img src="cart.png"> </button>
+                            <button class="add-to-cart-button" onclick="addToCart(this)">Add to Cart</button>
                         </div>
                         <div class="buy">
                             <button>BUY NOW</button>
@@ -1030,7 +1030,7 @@
                 <button class="close-modal" data-modal-id="modal14">&times;</button>
             </div>     
         </div>
-        <div class="modal product-modal" id="modal15">
+        <div class="modal product-modal" id="modal15" data-product-name="tv" data-product-price="1500" data-product-image="tv.png">
             <div class="modal-content">
                 <img src="tv.png" class="product-img">
                 <div class="details">
@@ -1059,7 +1059,7 @@
                             </div>
                         </div>
                         <div class="add-cart">
-                            <button>ADD TO CART <img src="cart.png"> </button>
+                            <button class="add-to-cart-button" onclick="addToCart(this)">Add to Cart</button>
                         </div>
                         <div class="buy">
                             <button>BUY NOW</button>
@@ -1069,7 +1069,7 @@
                 <button class="close-modal" data-modal-id="modal15">&times;</button>
             </div>     
         </div>
-        <div class="modal product-modal" id="modal16">
+        <div class="modal product-modal" id="modal16" data-product-name="drone" data-product-price="1500" data-product-image="drone.png">
             <div class="modal-content">
                 <img src="drone.png" class="product-img">
                 <div class="details">
@@ -1098,7 +1098,7 @@
                             </div>
                         </div>
                         <div class="add-cart">
-                            <button>ADD TO CART <img src="cart.png"> </button>
+                            <button class="add-to-cart-button" onclick="addToCart(this)">Add to Cart</button>
                         </div>
                         <div class="buy">
                             <button>BUY NOW</button>
@@ -1108,7 +1108,7 @@
                 <button class="close-modal" data-modal-id="modal16">&times;</button>
             </div>     
         </div>
-        <div class="modal product-modal" id="modal17">
+        <div class="modal product-modal" id="modal17" data-product-name="speaker" data-product-price="1500" data-product-image="speaker.png">
             <div class="modal-content">
                 <img src="speaker.png" class="product-img">
                 <div class="details">
@@ -1137,7 +1137,7 @@
                             </div>
                         </div>
                         <div class="add-cart">
-                            <button>ADD TO CART <img src="cart.png"> </button>
+                            <button class="add-to-cart-button" onclick="addToCart(this)">Add to Cart</button>
                         </div>
                         <div class="buy">
                             <button>BUY NOW</button>
@@ -1147,7 +1147,7 @@
                 <button class="close-modal" data-modal-id="modal17">&times;</button>
             </div>     
         </div>
-        <div class="modal product-modal" id="modal18">
+        <div class="modal product-modal" id="modal18" data-product-name="mobile" data-product-price="1500" data-product-image="simple mobile.png">
             <div class="modal-content">
                 <img src="simple mobile.png" class="product-img">
                 <div class="details">
@@ -1176,7 +1176,7 @@
                             </div>
                         </div>
                         <div class="add-cart">
-                            <button>ADD TO CART <img src="cart.png"> </button>
+                            <button class="add-to-cart-button" onclick="addToCart(this)">Add to Cart</button>
                         </div>
                         <div class="buy">
                             <button>BUY NOW</button>
@@ -1186,7 +1186,7 @@
                 <button class="close-modal" data-modal-id="modal18">&times;</button>
             </div>     
         </div>
-        <div class="modal product-modal" id="modal19">
+        <div class="modal product-modal" id="modal19" data-product-name="printer" data-product-price="1500" data-product-image="printer.png">
             <div class="modal-content">
                 <img src="printer.png" class="product-img">
                 <div class="details">
@@ -1215,7 +1215,7 @@
                             </div>
                         </div>
                         <div class="add-cart">
-                            <button>ADD TO CART <img src="cart.png"> </button>
+                            <button class="add-to-cart-button" onclick="addToCart(this)">Add to Cart</button>
                         </div>
                         <div class="buy">
                             <button>BUY NOW</button>
@@ -1225,7 +1225,7 @@
                 <button class="close-modal" data-modal-id="modal19">&times;</button>
             </div>     
         </div>
-        <div class="modal product-modal" id="modal20">
+        <div class="modal product-modal" id="modal20" data-product-name="joystick" data-product-price="1500" data-product-image="joystick.png">
             <div class="modal-content">
                 <img src="joystick.png" class="product-img">
                 <div class="details">
@@ -1254,7 +1254,7 @@
                             </div>
                         </div>
                         <div class="add-cart">
-                            <button>ADD TO CART <img src="cart.png"> </button>
+                            <button class="add-to-cart-button" onclick="addToCart(this)">Add to Cart</button>
                         </div>
                         <div class="buy">
                             <button>BUY NOW</button>

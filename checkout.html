@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,10 +17,13 @@
                 <img src="Icon.png" alt="web-icon">
                 CLICON
             </div>
-            <div class="user-icons">
+            <div class="user-settings">
                 <div class="shopping-cart">
-                    <img src="ShoppingCartSimple.png" alt="shopping-cart">
-                </div>
+                    <div class="products-in-cart">0</div>
+                    <a href="checkout.html">
+                        <img src="cart.png" alt="shopping-cart">
+                    </a>
+                </div>                
                 <div class="total-wishlist">
                     <img src="Heart.png" alt="wishlist">
                 </div>
@@ -67,77 +71,60 @@
     <nav class="pages">
         <div class="go-home">
             <a href="index.html"><img src="House.png" alt="home-button">Home</a>
-            &gt
+            &gt;
             <a href="#"><span>Shopping Cart</span></a>
         </div>
+    </nav>
+    <div class="checkout">
+    <div class="cart-products">
+        <h3>Shopping Cart</h3>
+        <div class="cart-summary-header">
+            <div class="header-item">Product</div>
+            <div class="dets">
+                <div class="header-item">Price</div>
+                <div class="header-item">Quantity</div>
+                <div class="header-item">Total</div>
+            </div>
+        </div>
+    
+        <div id="cart-items">
+            <div class="cart-item">
+                <div class="item-details">
+                    <img src="product-image-url" alt="Product Name" class="item-image" />
+                    <p class="item-name">Product Name</p>
+                </div>
+                <div class="item-info">
+                    <div class="quantity-container">
+                        <button class="decrement-button">-</button>
+                        <p class="item-quantity">1</p>
+                        <button class="increment-button">+</button>
+                    </div>
+                <p class="item-total">Total: $Total</p>
+                </div>
+            </div>
+            <span class="remove-item" data-index="0" title="Remove item">&times;</span>
+        </div>
+        <div class="cart-buttons">
+            <a href="index.html" class="cart-button" id="return-to-shop">RETURN TO SHOP</a>
+            <button id="update-cart" class="cart-button">UPDATE CART</button>
+        </div>
     </div>
-    <div class="container-3">
-        <div class="checkout-items">
-            <div class="container-4">Shopping Cart</div>
-            
-            <div class="table-name">
-                <div>PRODUCTS</div>
-                <div>PRICE</div>
-                <div>QUANTITY</div>
-                <div>SUB-TOTAL</div>
-            </div>
-            
-            <div id="cart-items" class="item-details">
-                <div class="close-button">
-                    <button>X</button>
-                </div>
-                
-                <div class="item-image">
-                    <img src="tv.png" alt="tv">
-                    <span>4K UHD LED Smart TV with Chromecast Built-in</span>
-                </div>
-                
-                <div class="item-price">
-                    <span class="old-price">$99</span> 
-                    $70
-                </div>
-                
-                <div class="item-quantity">
-                    <button class="subtract-button">-</button>
-                    <div class="number-of-items">01</div>
-                    <button class="plus-button">+</button>
-                </div>
-                
-                <div class="sub-total">$70</div>
-            </div>
 
-            <div class="nav-buttons">
-                <div class="return-home">
-                    <a href="index.html">
-                        <button><img src="ArrowLeft.png" alt=""> RETURN TO SHOP</button>
-                    </a>
-                </div>
-                <div class="update-cart">
-                    <button>UPDATE CART</button>
-                </div>
-            </div>
-            
-        </div>
-        
-        <div class="cart-total">
-            <div class="cart-title">Cart Totals</div>
-            
-            <div class="cart-content">
-                <div class="total">Sub-total <span>$320</span></div>
-                <div class="shipping-cost">Shipping <span>Free</span></div>
-                <div class="discount">Discount <span>$24</span></div>
-                <div class="tax">Tax <span>$61.99</span></div>
-            </div>
-            
-            <div class="cart-sum">Total <span>$357.99 USD</span></div>
-            
-            <div class="checkout-button">
-                <button>PROCEED TO CHECKOUT <img src="ArrowRight.png" alt=""></button>
-            </div>
+        <div class="cart-summary">
+            <h3>Card Totals</h3>
+            <p>Sub-total:</p>
+            <p>Shipping:</p>
+            <p>Discount:</p>
+            <p>Tax:</p>
+            <hr>
+            <p id="total-amount">Total:</p>
+            <button class="checkout-button">Proceed to Checkout <img src="right.png" alt=""> </button>
         </div>
     </div>
-    
-    
+
+    <div id="cart-total"></div>
+
+    <script src="checkoutscript.js"></script> <!-- Link your JavaScript file -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-logo">
@@ -168,7 +155,7 @@
                 <h3>QUICK LINKS</h3>
                 <ul>
                     <li><a href="#">Shop Product</a></li>
-                    <li><a href="#">Shoping Cart</a></li>
+                    <li><a href="#">Shopping Cart</a></li>
                     <li><a href="#">Wishlist</a></li>
                     <li><a href="#">Compare</a></li>
                     <li><a href="#">Track Order</a></li>
