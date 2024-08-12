@@ -86,10 +86,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     let totalQuantity = 0;
 
-    function updateTotalCount() {
-        productsInCart.textContent = totalQuantity;
-    }
-
     modals.forEach(modal => {
         const decrementBtn = modal.querySelector('.subtract-button button');
         const incrementBtn = modal.querySelector('.plus-button button');
@@ -119,24 +115,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     updateTotalCount();
 });
-//add to cart
-// increment the count
-function increment(button) {
-    const modal = button.closest('.product-modal');
-    const countingElement = modal.querySelector('.counting');
-    let count = parseInt(countingElement.textContent);
-    countingElement.textContent = count + 1;
-}
-
-// decrement the count
-function decrement(button) {
-    const modal = button.closest('.product-modal');
-    const countingElement = modal.querySelector('.counting');
-    let count = parseInt(countingElement.textContent);
-    if (count > 0) {
-        countingElement.textContent = count - 1;
-    }
-}
 
 // Add to cart 
 function addToCart(button) {
@@ -175,3 +153,4 @@ console.log('Adding to cart:', {
     image: productImage
 });
 }
+//

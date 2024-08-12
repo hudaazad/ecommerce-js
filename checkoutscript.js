@@ -104,3 +104,41 @@ function removeItemFromCart(index) {
 }
 
 document.addEventListener('DOMContentLoaded', updateCartDisplay);
+//
+function updateTotalQuantity() {
+    // Get the cart from localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    // Calculate the total quantity
+    let totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
+    
+    // Update the `products-in-cart` element on the current page
+    const productsInCartElements = document.querySelectorAll('.products-in-cart');
+    productsInCartElements.forEach(element => {
+        element.textContent = totalQuantity;
+    });
+}
+function updateCartItemQuantity(index, change) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    if (cart[index]) {
+        cart[index].quantity += change;
+        if (cart[index].quantity < 1) {
+            cart[index].quantity = 1; 
+        }
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartDisplay();
+    updateTotalQuantity(); // Update the total quantity
+}
+
+function removeItemFromCart(index) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.splice(index, 1); 
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartDisplay(); 
+    updateTotalQuantity(); // Update the total quantity
+}
+document.addEventListener('DOMContentLoaded', () => {
+    updateCartDisplay();
+    updateTotalQuantity(); // Ensure the total quantity is displayed when the page loads
+});

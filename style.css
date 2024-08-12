@@ -345,6 +345,7 @@ body {
     border-radius: 50%;
     width: fit-content;
 }
+
 .close-modal:hover {
     background: #555;
 }
