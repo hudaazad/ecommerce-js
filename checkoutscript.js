@@ -1,63 +1,106 @@
 function updateCartDisplay() {
     const cartItemsContainer = document.getElementById('cart-items');
     const totalAmountElement = document.getElementById('total-amount');
+    const subTotalElement = document.querySelector('.cart-summary p:nth-of-type(1)');
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-    console.log('Cart contents:', cart); // Log cart contents for debugging
 
     if (cart.length === 0) {
         cartItemsContainer.innerHTML = '<p>Your cart is empty</p>';
-        totalAmountElement.innerText = 'Total: $0.00'; // Display $0.00 if cart is empty
+        totalAmountElement.innerText = 'Total: $0.00';
+        subTotalElement.innerText = 'Sub-total: $0.00';
     } else {
         let cartHTML = '';
-        let total = 0;
+        let subTotal = 0;
 
         cart.forEach((item, index) => {
-            // Validate item price and quantity
             const itemPrice = typeof item.price === 'number' ? item.price : 0;
             const itemQuantity = typeof item.quantity === 'number' ? item.quantity : 0;
 
             if (itemPrice <= 0 || itemQuantity <= 0) {
                 console.error('Invalid item data:', item);
-                return; // Skip this item if data is invalid
+                return;
             }
 
             const itemTotal = itemPrice * itemQuantity;
-            total += itemTotal;
+            subTotal += itemTotal;
 
             cartHTML += `
-                <div class="cart-item" data-name="${item.name}">
-                    <img src="${item.image}" alt="${item.name}" class="item-image" />
-                    <div class="item-product">${item.name}</div>
-                    <div class="item-price">$${itemPrice.toFixed(2)}</div>
-                    <div class="item-quantity">${itemQuantity}</div>
-                    <div class="item-total">$${itemTotal.toFixed(2)}</div>
+                <div class="cart-item" data-index="${index}">
+                    <div class="item-details">
+                        <img src="${item.image}" alt="${item.name}" class="item-image" />
+                        <p class="item-name">${item.name}</p>
+                    </div>
+                    <div class="item-info">
+                    <p class="item-price">Price: $${itemPrice}</p>
+                        <div class="quantity-container">
+                            <button class="decrement-button" data-index="${index}">-</button>
+                            <p class="item-quantity">${itemQuantity}</p>
+                            <button class="increment-button" data-index="${index}">+</button>
+                        </div>
+                        <p class="item-total">Total: $${itemTotal.toFixed(2)}</p>
+                    </div>
                     <span class="remove-item" data-index="${index}" title="Remove item">&times;</span>
                 </div>
             `;
         });
 
         cartItemsContainer.innerHTML = cartHTML;
-        totalAmountElement.innerText = `Total: $${total.toFixed(2)}`; // Update total amount
+        subTotalElement.innerText = `Sub-total: $${subTotal.toFixed(2)}`;
 
-        // Add event listener for remove icons
-        const removeButtons = document.querySelectorAll('.remove-item');
-        removeButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const index = parseInt(this.getAttribute('data-index'), 10);
-                removeItemFromCart(index);
-            });
-        });
+        const discount = 24.00;
+        const shipping = 0.00;
+        const tax = 61.99;
+        const total = subTotal - discount + shipping + tax;
+
+        totalAmountElement.innerText = `Total: $${total.toFixed(2)} USD`;
+        attachEventListeners();
     }
 }
 
-// Update cart display on page load
-document.addEventListener('DOMContentLoaded', updateCartDisplay);
-function removeItemFromCart(index) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart.splice(index, 1); // Remove the item at the specified index
-    localStorage.setItem('cart', JSON.stringify(cart));
-    updateCartDisplay(); // Refresh cart display
+function attachEventListeners() {
+    const incrementButtons = document.querySelectorAll('.increment-button');
+    const decrementButtons = document.querySelectorAll('.decrement-button');
+    const removeButtons = document.querySelectorAll('.remove-item');
+
+    incrementButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const index = parseInt(this.getAttribute('data-index'), 10);
+            updateCartItemQuantity(index, 1);
+        });
+    });
+
+    decrementButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const index = parseInt(this.getAttribute('data-index'), 10);
+            updateCartItemQuantity(index, -1);
+        });
+    });
+
+    removeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const index = parseInt(this.getAttribute('data-index'), 10);
+            removeItemFromCart(index);
+        });
+    });
 }
 
-// count in cart
+function updateCartItemQuantity(index, change) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    if (cart[index]) {
+        cart[index].quantity += change;
+        if (cart[index].quantity < 1) {
+            cart[index].quantity = 1; 
+        }
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartDisplay();
+}
+
+function removeItemFromCart(index) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.splice(index, 1); 
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartDisplay(); 
+}
+
+document.addEventListener('DOMContentLoaded', updateCartDisplay);

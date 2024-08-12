@@ -34,14 +34,13 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCarousel();
 });
 
-//modal method for first grid
+//modal for first grid
 
 document.addEventListener('DOMContentLoaded', () => {
     const modals = document.querySelectorAll('.modal');
     const closeButtons = document.querySelectorAll('.close-modal');
-    const grids = document.querySelectorAll('.grid, .grid-item, .xbox'); // Combine all grid selectors
-
-    // Function to open a modal
+    const grids = document.querySelectorAll('.grid, .grid-item, .xbox');
+    // open a modal
     const openModal = (productId) => {
         const modal = document.getElementById(`modal${productId}`);
         if (modal) {
@@ -50,15 +49,13 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error(`Modal with ID modal${productId} not found`);
         }
     };
-
-    // Function to close a modal
+    // close a modal
     const closeModal = (modal) => {
         if (modal) {
             modal.style.display = 'none';
         }
     };
 
-    // Set up click listeners for grid items
     grids.forEach(grid => {
         grid.addEventListener('click', () => {
             const productId = grid.getAttribute('data-product-id');
@@ -66,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Set up click listeners for close buttons
     closeButtons.forEach(button => {
         button.addEventListener('click', () => {
             const modalId = button.getAttribute('data-modal-id');
@@ -75,7 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Set up click listeners for modals to close when clicking outside the content
     modals.forEach(modal => {
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
@@ -102,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         let quantity = parseInt(quantitySpan.textContent);
 
-        //update quantity and total count
+        //update count
         function updateQuantity(newQuantity) {
             totalQuantity += newQuantity - quantity;
             quantity = newQuantity;
@@ -125,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
     updateTotalCount();
 });
 //add to cart
-// Function to increment the count
+// increment the count
 function increment(button) {
     const modal = button.closest('.product-modal');
     const countingElement = modal.querySelector('.counting');
@@ -133,7 +128,7 @@ function increment(button) {
     countingElement.textContent = count + 1;
 }
 
-// Function to decrement the count
+// decrement the count
 function decrement(button) {
     const modal = button.closest('.product-modal');
     const countingElement = modal.querySelector('.counting');
@@ -143,9 +138,7 @@ function decrement(button) {
     }
 }
 
-// Function to add the product to the cart
-// Add to cart function in script.js
-// In script.js (adding items to cart)
+// Add to cart 
 function addToCart(button) {
     const modal = button.closest('.product-modal');
     const productName = modal.dataset.productName;
