@@ -31,13 +31,13 @@ function updateCartDisplay() {
                         <p class="item-name">${item.name}</p>
                     </div>
                     <div class="item-info">
-                    <p class="item-price">Price: $${itemPrice}</p>
+                    <p class="item-price">$${itemPrice}</p>
                         <div class="quantity-container">
                             <button class="decrement-button" data-index="${index}">-</button>
                             <p class="item-quantity">${itemQuantity}</p>
                             <button class="increment-button" data-index="${index}">+</button>
                         </div>
-                        <p class="item-total">Total: $${itemTotal.toFixed(2)}</p>
+                        <p class="item-total">$${itemTotal.toFixed(2)}</p>
                     </div>
                     <span class="remove-item" data-index="${index}" title="Remove item">&times;</span>
                 </div>
@@ -46,6 +46,8 @@ function updateCartDisplay() {
 
         cartItemsContainer.innerHTML = cartHTML;
         subTotalElement.innerText = `Sub-total: $${subTotal.toFixed(2)}`;
+        subTotalElement.innerHTML = `Sub-total: <span style="margin-left: 5px;">$${subTotal.toFixed(2)}</span>`;
+
 
         const discount = 24.00;
         const shipping = 0.00;
@@ -53,6 +55,8 @@ function updateCartDisplay() {
         const total = subTotal - discount + shipping + tax;
 
         totalAmountElement.innerText = `Total: $${total.toFixed(2)} USD`;
+        totalAmountElement.innerHTML = `Total: <span style="margin-left: 5px;">$${total.toFixed(2)}</span>`;
+        
         attachEventListeners();
     }
 }
@@ -139,3 +143,4 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCartDisplay();
     updateTotalQuantity(); 
 });
+ 

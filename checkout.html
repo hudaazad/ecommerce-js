@@ -94,13 +94,13 @@
                     <p class="item-name">Product Name</p>
                 </div>
                 <div class="item-info">
-                <p class="item-price">Price: $Price</p>
+                <p class="item-price"></p>
                     <div class="quantity-container">
                         <button class="decrement-button" data-index="0">-</button>
                         <p class="item-quantity">1</p>
                         <button class="increment-button" data-index="0">+</button>
                     </div>
-                <p class="item-total">Total: $Total</p>
+                <p class="item-total"></p>
                 </div>
             </div>
             <span class="remove-item" data-index="0" title="Remove item">&times;</span>
@@ -111,16 +111,29 @@
         </div>
     </div>
 
-        <div class="cart-summary">
-            <h3>Cart Totals</h3>
-            <p>Sub-total:</p>
-            <p>Shipping:Free</p>
-            <p>Discount:$24</p>
-            <p>Tax:$61.99</p>
-            <hr>
-            <p id="total-amount">Total:</p>
-            <button class="checkout-button">Proceed to Checkout <img src="right.png" alt=""> </button>
+    <div class="cart-summary">
+        <h3>Cart Totals</h3>
+        <div class="summary-item">
+            <p class="label">Sub-total:</p>
+            <p class="amount"></p>
         </div>
+        <div class="summary-item">
+            <p class="label">Shipping:</p>
+            <p class="amount">Free</p>
+        </div>
+        <div class="summary-item">
+            <p class="label">Discount:</p>
+            <p class="amount">$24</p>
+        </div>
+        <div class="summary-item">
+            <p class="label">Tax:</p>
+            <p class="amount">$61.99</p>
+        </div>
+        <hr>
+        <p id="total-amount">Total: Subtotal Amount</p>
+        <button class="checkout-button">Proceed to Checkout <img src="right.png" alt=""> </button>
+    </div>
+    
     </div>
 
     <div id="cart-total"></div>
