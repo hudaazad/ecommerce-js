@@ -7,7 +7,9 @@ function updateCartDisplay() {
     if (cart.length === 0) {
         cartItemsContainer.innerHTML = '<p>Your cart is empty</p>';
         totalAmountElement.innerText = 'Total: $0.00';
+        totalAmountElement.innerHTML = `Total: <span style="margin-left: 5px;">$0.00</span>`;
         subTotalElement.innerText = 'Sub-total: $0.00';
+        subTotalElement.innerHTML = `Sub-total: <span style="margin-left: 5px;">$0.00</span>`;
     } else {
         let cartHTML = '';
         let subTotal = 0;
@@ -37,7 +39,7 @@ function updateCartDisplay() {
                             <p class="item-quantity">${itemQuantity}</p>
                             <button class="increment-button" data-index="${index}">+</button>
                         </div>
-                        <p class="item-total">$${itemTotal.toFixed(2)}</p>
+                        <p class="item-total">$${itemTotal.toFixed()}</p>
                     </div>
                     <span class="remove-item" data-index="${index}" title="Remove item">&times;</span>
                 </div>
@@ -45,8 +47,8 @@ function updateCartDisplay() {
         });
 
         cartItemsContainer.innerHTML = cartHTML;
-        subTotalElement.innerText = `Sub-total: $${subTotal.toFixed(2)}`;
-        subTotalElement.innerHTML = `Sub-total: <span style="margin-left: 5px;">$${subTotal.toFixed(2)}</span>`;
+        subTotalElement.innerText = `Sub-total: $${subTotal.toFixed()}`;
+        subTotalElement.innerHTML = `Sub-total: <span style="margin-left: 5px;">$${subTotal.toFixed()}</span>`;
 
 
         const discount = 24.00;
@@ -54,8 +56,8 @@ function updateCartDisplay() {
         const tax = 61.99;
         const total = subTotal - discount + shipping + tax;
 
-        totalAmountElement.innerText = `Total: $${total.toFixed(2)} USD`;
-        totalAmountElement.innerHTML = `Total: <span style="margin-left: 5px;">$${total.toFixed(2)}</span>`;
+        totalAmountElement.innerText = `Total: $${total.toFixed()} USD`;
+        totalAmountElement.innerHTML = `Total: <span style="margin-left: 5px;">$${total.toFixed()}</span>`;
         
         attachEventListeners();
     }

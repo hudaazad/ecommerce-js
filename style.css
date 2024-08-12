@@ -388,6 +388,8 @@ body {
     padding: 5px;
     margin: 20px 0px 20px 0px;
     background-color: #FA8232;
+    display: flex;
+    align-items: center;
 }
 
 .add-cart button{
@@ -400,6 +402,8 @@ body {
     margin: 20px 0px 20px 10px;
     background-color: white;
     border: 1px solid #FA8232;
+    display: flex;
+    align-items: center;
 }
 .buy button{
     background-color: white;
