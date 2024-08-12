@@ -106,13 +106,10 @@ function removeItemFromCart(index) {
 document.addEventListener('DOMContentLoaded', updateCartDisplay);
 //
 function updateTotalQuantity() {
-    // Get the cart from localStorage
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     
-    // Calculate the total quantity
     let totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
     
-    // Update the `products-in-cart` element on the current page
     const productsInCartElements = document.querySelectorAll('.products-in-cart');
     productsInCartElements.forEach(element => {
         element.textContent = totalQuantity;
@@ -128,7 +125,7 @@ function updateCartItemQuantity(index, change) {
     }
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartDisplay();
-    updateTotalQuantity(); // Update the total quantity
+    updateTotalQuantity(); 
 }
 
 function removeItemFromCart(index) {
@@ -136,10 +133,9 @@ function removeItemFromCart(index) {
     cart.splice(index, 1); 
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartDisplay(); 
-    updateTotalQuantity(); // Update the total quantity
+    updateTotalQuantity(); 
 }
 document.addEventListener('DOMContentLoaded', () => {
     updateCartDisplay();
-    updateTotalQuantity(); // Ensure the total quantity is displayed when the page loads
+    updateTotalQuantity(); 
 });
-////

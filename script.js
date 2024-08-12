@@ -142,11 +142,11 @@ function addToCart(button) {
 
         localStorage.setItem('cart', JSON.stringify(cart));
         console.log('Cart after adding item:', JSON.parse(localStorage.getItem('cart')));
-        updateTotalQuantity(); // Update the total quantity
+        updateTotalQuantity(); 
     } else {
         alert('Please select a quantity greater than 0.');
     }
-    // Inside addToCart function
+// Inside addToCart function
 console.log('Adding to cart:', {
     name: productName,
     price: productPrice,
@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function updateTotalQuantity() {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     let totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
-    console.log('Total Quantity:', totalQuantity); // Debug log
+    console.log('Total Quantity:', totalQuantity); 
     const productsInCartElements = document.querySelectorAll('.products-in-cart');
     productsInCartElements.forEach(element => {
         element.textContent = totalQuantity;
