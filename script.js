@@ -142,6 +142,7 @@ function addToCart(button) {
 
         localStorage.setItem('cart', JSON.stringify(cart));
         console.log('Cart after adding item:', JSON.parse(localStorage.getItem('cart')));
+        updateTotalQuantity(); // Update the total quantity
     } else {
         alert('Please select a quantity greater than 0.');
     }
@@ -154,3 +155,17 @@ console.log('Adding to cart:', {
 });
 }
 //
+
+document.addEventListener('DOMContentLoaded', () => {
+    updateTotalQuantity();
+});
+
+function updateTotalQuantity() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
+    console.log('Total Quantity:', totalQuantity); // Debug log
+    const productsInCartElements = document.querySelectorAll('.products-in-cart');
+    productsInCartElements.forEach(element => {
+        element.textContent = totalQuantity;
+    });
+}

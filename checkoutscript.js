@@ -142,3 +142,4 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCartDisplay();
     updateTotalQuantity(); // Ensure the total quantity is displayed when the page loads
 });
+////
