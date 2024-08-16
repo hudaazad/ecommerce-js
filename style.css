@@ -799,3 +799,8 @@ h3 {
     width: max-content;
     padding: 10px;
 }
+.youtube-video{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
